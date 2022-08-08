@@ -7,6 +7,11 @@ export const initialState = {
 function reducer(state, action) {
     console.log(action)
     switch(action.type) {
+        case "AUTH_USER":
+            return {
+                ...state,
+                user: action.user,
+            }
         case "ADD_TO_BASKET":
             return {
                 ...state,
